@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Achados e Perdidos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Sistema de Achados e Perdidos</h1>
+
+    <!-- Formulário de Cadastro [C - Create] -->
+    <form id="form-cadastro">
+      <h3>Cadastrar Novo Item Encontrado</h3>
+      <input
+        type="text"
+        id="titulo"
+        placeholder="Título do item (Ex: Garrafa Azul)"
+        required
+      />
+      <input
+        type="text"
+        id="descricao"
+        placeholder="Descrição do Item (Cor, Marca, Detalhes...)"
+        required
+      />
+      <input
+        type="text"
+        id="local_encontrado"
+        placeholder="Local onde foi encontrado (Ex: Quadra)"
+        required
+      />
+      <input type="date" id="data_encontrado" required />
+      <button type="submit">Cadastrar Item</button>
+    </form>
+
+    <!-- Tabela de Listagem [R - Read / U - Update / D - Delete] -->
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Título</th>
+          <th>Descrição</th>
+          <th>Local</th>
+          <th>Data</th>
+          <th>Status</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <!-- O JavaScript irá preencher esta parte automaticamente -->
+      <tbody id="tabela-itens"></tbody>
+    </table>
+
+    <!-- Importa o JavaScript que faz as requisições para o Python -->
+    <script src="script.js"></script>
+  </body>
+</html>
