@@ -1,46 +1,160 @@
+/* Define como os elementos calculam seus tamanhos */
+* {
+  box-sizing: border-box;
+}
+
+/* Estilização geral da página */
 body {
   font-family: Arial, sans-serif;
-  max-width: 900px;
-  margin: 30px auto;
-  padding: 0 15px;
+  max-width: 950px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background: #f7f6f2;
+  color: #424942;
 }
 
+/* Título principal */
+h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #39443b;
+  letter-spacing: -0.8px;
+}
+
+/* Pequeno detalhe abaixo do título */
+h1::after {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 4px;
+  background: #829b83;
+  border-radius: 5px;
+  margin-top: 12px;
+}
+
+/* Título do formulário */
+h3 {
+  font-size: 17px;
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+
+/* Área de cadastro de itens */
 form {
   display: grid;
-  gap: 10px;
-  background: #f4f6f9;
-  padding: 16px;
-  border-radius: 8px;
-  margin-bottom: 25px;
+  gap: 12px;
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 10px;
+  margin-bottom: 30px;
 }
 
-input,
-button {
-  padding: 8px;
+/* Campos de preenchimento */
+input {
+  width: 100%;
+  padding: 11px 12px;
   font-size: 14px;
+  font-family: inherit;
+  color: #424942;
+  background: #fafbf9;
+  border: 1px solid #e2e5df;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s;
 }
 
+/* Destaque ao selecionar um campo */
+input:focus {
+  border-color: #829b83;
+}
+
+/* Cor do teto de orientação dos campos */
+input::placeholder {
+  color: #a0a69f;
+}
+
+/* Estilização dos botões */
 button {
+  padding: 10px 16px;
+  font-size: 14px;
+  font-family: inherit;
   cursor: pointer;
-  background: #0f2c59;
+  background: #829b83;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
+  transition: background 0.3s;
 }
 
+/* Muda a cor do botão ao passar o mouse */
+button:hover {
+  background: #6e896f;
+}
+
+/* Estrutura geral da tabela */
 table {
   width: 100%;
   border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e7e8e2;
 }
 
+/* Espaçamento e alinhamento das células */
 th,
 td {
-  border: 1px solid #ccc;
-  padding: 8px;
+  padding: 13px 12px;
   text-align: left;
+  border-bottom: 1px solid #eeeeea;
+  font-size: 14px;
 }
 
+/* Cabeçalho da tabela */
 th {
-  background: #0f2c59;
+  background: #829b83;
   color: white;
+  font-weight: 600;
+}
+
+/* Remove a borda inferior da última linha */
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Cor dos textos da tabela */
+td {
+  color: #555d55;
+}
+
+/* Ajusta o tamanho dos botões dentro da tabela */
+td button {
+  padding: 8px 10px;
+  font-size: 12px;
+  min-width: 85px;
+  margin-right: 5px;
+  text-align: center;
+}
+
+/* Cor do botão de excluir */
+td button[style] {
+  background: #c47c76 !important;
+}
+
+/* Efeito ao passar o mouse no botão de excluir */
+td button[style]:hover {
+  background: #ad6862 !important;
+}
+
+/* Organiza os botões da coluna de ações */
+td:last-child {
+  white-space: nowrap;
+}
+
+/* Texto de apresentação abaixo do título */
+.subtitulo {
+  font-size: 14px;
+  color: #929a90;
+  margin: 0 0 28px;
 }

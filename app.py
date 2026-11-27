@@ -32,14 +32,14 @@ def criar_item():
     cursor = conn.cursor()
 
     sql = """
-        INSERT INTO ITENS (titulo, descricao, local_encontrado, data_encontrado)
+        INSERT INTO ITENS (titulo, descricao, local_encontrado, data_encontro)
         VALUES (%s, %s, %s, %s)
     """
     valores = (
         dados["titulo"],
         dados.get("descricao", ""),
         dados["local_encontrado"],
-        dados["data_encontrado"],
+        dados["data_encontro"],
     )
 
     cursor.execute(sql, valores)

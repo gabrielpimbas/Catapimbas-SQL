@@ -54,7 +54,7 @@ async function cadastrarItem(evento) {
     titulo: document.getElementById("titulo").value,
     descricao: document.getElementById("descricao").value,
     local_encontrado: document.getElementById("local_encontrado").value,
-    data_encontrado: document.getElementById("data_encontrado").value,
+    data_encontro: document.getElementById("data_encontro").value,
   };
 
   const resposta = await fetch(API_URL, {

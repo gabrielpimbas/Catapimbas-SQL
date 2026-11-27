@@ -18,7 +18,8 @@ primary key (id)
 insert into itens (titulo, descricao, local_encontrado, data_encontro) values
 ('Garrafa térmica azul','Marca Stanley com adesivo de foguete','Quadra de Esportes','2026-11-20'),
 ('Caderno de cálculo','Capa preta, espiral, sem nome','Laboratório 03','2026-11-21'),
-('Casaco moletom cinza','Tamanho M, encontrado na cadeira','Auditório','2026-11-22');
+('Casaco moletom cinza','Tamanho M, encontrado na cadeira','Auditório','2026-11-22'),
+('Notebook Samsung','Notebook Samsung, Preto, Adesivo Hackatorion','Info 03','2026-11-23');
 
 -- Comando para conferir as informações da tabela Itens.
 select * from itens;
