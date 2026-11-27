@@ -158,3 +158,83 @@ td:last-child {
   color: #929a90;
   margin: 0 0 28px;
 }
+
+/* --- RESPONSIVIDADE  */
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+  body {
+    margin: 20px auto;
+    padding: 0 12px;
+  }
+
+  /* Ajusta o título */
+  h1 {
+    font-size: 24px;
+  }
+
+  .subtitulo {
+    font-size: 13px;
+    margin-bottom: 22px;
+  }
+
+  /* Reduz o espaço do formulário */
+  form {
+    padding: 16px;
+    gap: 10px;
+  }
+
+  input {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  /* Botões ocupam melhor o espaço disponível */
+  button {
+    padding: 10px;
+  }
+
+  /* Permite rolar a tabela horizontalmente */
+  table {
+    min-width: 700px;
+  }
+
+  /* Mantém a tabela organizada em telas pequenas */
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* Ajustes para celulares menores */
+@media (max-width: 480px) {
+  body {
+    margin-top: 15px;
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 21px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  form {
+    padding: 14px;
+    border-radius: 8px;
+  }
+
+  input {
+    font-size: 13px;
+  }
+
+  button {
+    font-size: 13px;
+  }
+
+  th,
+  td {
+    padding: 10px;
+    font-size: 12px;
+  }
+}
