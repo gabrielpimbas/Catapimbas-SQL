@@ -22,9 +22,9 @@ async function carregarItens() {
       const tr = document.createElement("tr");
 
       const botaoAcao =
-        item.status === "Disponível"
+        item.status === "Disponivel"
           ? `<button onclick="devolverItem(${item.id})">Devolver</button>`
-          : `<span>Retirado Por: <b>${item.retiradoPor}</b></span>`;
+          : `<span>Retirado Por: <b>${item.retirado_por}</b></span>`;
 
       tr.innerHTML = `
                 <td>${item.id}</td>
@@ -54,7 +54,7 @@ async function cadastrarItem(evento) {
     titulo: document.getElementById("titulo").value,
     descricao: document.getElementById("descricao").value,
     local_encontrado: document.getElementById("local_encontrado").value,
-    data_encontro: document.getElementById("data_encontro").value,
+    data_encontrado: document.getElementById("data_encontrado").value,
   };
 
   const resposta = await fetch(API_URL, {
@@ -68,7 +68,7 @@ async function cadastrarItem(evento) {
     carregarItens(); // Atualiza a lista na tela
   } else {
     const erro = await resposta.json();
-    alert("Erro ao cadastrar: " + erro.message);
+    alert("Erro ao cadastrar: " + erro.erro);
   }
 }
 
@@ -80,7 +80,7 @@ async function devolverItem(id) {
   const resposta = await fetch(`${API_URL}/${id}/devolver`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ retiradoPor: nomePessoa }),
+    body: JSON.stringify({ retirado_por: nomePessoa }),
   });
 
   if (resposta.ok) {

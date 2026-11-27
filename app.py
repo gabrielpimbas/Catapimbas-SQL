@@ -32,14 +32,14 @@ def criar_item():
     cursor = conn.cursor()
 
     sql = """
-        INSERT INTO ITENS (titulo, descricao, local_encontrado)
+        INSERT INTO ITENS (titulo, descricao, local_encontrado, data_encontrado)
         VALUES (%s, %s, %s, %s)
     """
     valores = (
         dados["titulo"],
         dados.get("descricao", ""),
         dados["local_encontrado"],
-        dados["data_encontro"],
+        dados["data_encontrado"],
     )
 
     cursor.execute(sql, valores)
@@ -88,7 +88,7 @@ def deletar_item(id):
     cursor = conn.cursor()
 
     sql = "DELETE FROM ITENS WHERE id = %s"
-    cursor.execute(sql, (id))  # Atenção à vírgula na tupla de 1 elemento: (id,)
+    cursor.execute(sql, (id,))  # Atenção à vírgula na tupla de 1 elemento: (id,)
     conn.commit()
 
     linhas_afetadas = cursor.rowcount
